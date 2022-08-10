@@ -12,7 +12,7 @@ userForm.loginFormCallback = data => {
 };
 
 userForm.registerFormCallback = data => {
-  ApiConnector.login(data, resp => {
+  ApiConnector.register(data, resp => {
     if(resp.success){
       location.reload();
     } else {

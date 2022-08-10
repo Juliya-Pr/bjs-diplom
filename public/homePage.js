@@ -72,16 +72,6 @@ ApiConnector.getFavorites(resp => {
 	}
 });
 
-favoritesWidget.favoritesTableBody = () => {
-	ApiConnector.getFavorites(resp => {
-		if(resp.success) {
-			favoritesWidget.clearTable();
-			favoritesWidget.fillTable(data);
-			moneyManager.updateUsersList(data);
-		}
-	});
-}
-
 favoritesWidget.addUserCallback = (data) => {
 	ApiConnector.addUserToFavorites(data, resp => {
 
